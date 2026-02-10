@@ -422,5 +422,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+function resetLove() {
+    localStorage.removeItem("loveUnlocked");
+    window.location.href = "password.html";
+}
 
 
