@@ -423,10 +423,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* =========================================================
-   ❤️ RESET (FOR TESTING ONLY)
-========================================================= */
-function resetLove() {
-    localStorage.removeItem("loveUnlocked");
-    window.location.href = "password.html";
-}
+
