@@ -246,27 +246,7 @@ z-index: 2;
         opacity:0;
     }
 }
-.navbar{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(255,0,100,0.8);
-    padding:15px;
-    text-align:center;
-    z-index:1000;
-}
 
-.navbar a{
-    color:white;
-    margin:15px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.navbar a:hover{
-    color:#ffe6f0;
-}
 .hint-text{
     color:#000000;
     font-style:italic;
