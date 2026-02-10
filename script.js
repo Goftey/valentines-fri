@@ -298,7 +298,7 @@ let wrongAttempts = 0;
 
 function checkPassword() {
     const password = document.getElementById("passwordInput")?.value;
-    const correctPassword = "14022024"; // 🔴 CHANGE TO DAY YOU MET (DDMMYYYY)
+    const correctPassword = "11022024"; // your special day
 
     const errorMsg = document.getElementById("errorMsg");
     const hintMsg = document.getElementById("hintMsg");
@@ -307,7 +307,7 @@ function checkPassword() {
     if (!password) return;
 
     if (password === correctPassword) {
-        localStorage.setItem("loveUnlocked", "true");
+        // ✅ just redirect, do NOT store anything
         window.location.href = "slideshow.html";
     } else {
         wrongAttempts++;
@@ -341,8 +341,6 @@ function checkPassword() {
         }
     }
 }
-
-
 /* =========================================================
    ❤️ PHOTO SLIDESHOW (ONLY RUNS ON slideshow.html)
 ========================================================= */
