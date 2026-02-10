@@ -268,7 +268,7 @@ z-index: 2;
     color:#ffe6f0;
 }
 .hint-text{
-    color:#fff;
+    color:#000000;
     font-style:italic;
     margin-top:10px;
     animation: fadeHint 1s;
