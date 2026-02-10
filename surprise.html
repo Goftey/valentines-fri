@@ -9,7 +9,7 @@
         body {
             font-family: 'Arial', sans-serif;
             background: #fff0f5;
-            color: #e60073;
+            color: #000000;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -68,6 +68,14 @@
         .quiz-container label {
             margin-left: 10px;
         }
+.option {
+    margin: 6px 0;
+}
+
+.option label {
+    display: block;
+    cursor: pointer;
+}
 
         ol {
             display: inline-block;
@@ -147,10 +155,13 @@ quizData.forEach((item, index) => {
     div.style.marginBottom = "15px";
     div.innerHTML = `<p>${index + 1}. ${item.q}</p>` +
         item.options.map(opt => 
-            `<label>
-                <input type="radio" name="q${index}" value="${opt}"> ${opt}
-            </label>`
-        ).join("");
+    `<div class="option">
+        <label>
+            <input type="radio" name="q${index}" value="${opt}"> ${opt}
+        </label>
+    </div>`
+).join("");
+
     questionsContainer.appendChild(div);
 });
 
