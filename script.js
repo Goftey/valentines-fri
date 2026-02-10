@@ -209,7 +209,7 @@ function loveCounter() {
 
     const counter = document.getElementById("loveDays");
     if (counter) {
-        counter.innerText = `${days} days together ❤️`;
+        counter.innerText = `${days} days together ❤️Happy anniversary too Babyy`;
     }
 }
 
@@ -289,14 +289,6 @@ function surpriseMessage(){
 /* =========================================================
    ❤️ GLOBAL SITE ACCESS GUARD (PASSWORD FIRST ALWAYS)
 ========================================================= */
-(function () {
-    const unlocked = localStorage.getItem("loveUnlocked");
-    const currentPage = window.location.pathname.split("/").pop() || "password.html";
-
-    if (unlocked !== "true" && currentPage !== "password.html") {
-        window.location.href = "password.html";
-    }
-})();
 
 
 /* =========================================================
