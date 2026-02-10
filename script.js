@@ -124,7 +124,7 @@ let text = `My Dearest Frida,
 
 From the very first moment our paths crossed, I knew something magical had begun. Your smile lights up my world brighter than the sun on a summer day, and your laughter… oh, your laughter is my favorite song in the entire universe.
 
-Every little thing about you amazes me. The way you care, the way you dream, and yes… even the way you steal the last sipp of minute maid without telling me 😏.
+Every little thing about you amazes me. The way you care, the way you dream, and yes… even the way you steal the last sipp of minute maid without telling me.
 
 I love how our hearts understand each other without words, how we can be silly together, and how even on the quietest days, just being near you fills me with happiness.
 
