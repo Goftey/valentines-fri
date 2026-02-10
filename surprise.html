@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Valentine ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #fff0f5;
+            color: #e60073;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background: #e60073;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: #e60073;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: #ff3399;
+        }
+
+        .quiz-container {
+            display: inline-block;
+            text-align: left;
+            background: #ffe6f0;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .quiz-container p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .quiz-container label {
+            margin-left: 10px;
+        }
+
+        ol {
+            display: inline-block;
+            text-align: left;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body><audio id="bgMusic" src="music1.mp3" loop></audio>
+
+
+<nav class="navbar" id="navBar">
+    <a href="index.html">Home</a>
+    <a href="letter.html">Love Letter</a>
+    <a href="gallery.html">Memories</a>
+    <a href="reasons.html">Why I Love You</a>
+    <a href="future.html">Future</a>
+    <a href="surprise.html">Surprise</a>
+</nav>
+
+<section class="section final">
+    <h2>Will You Be My Valentine Forever? ❤️</h2>
+
+    
+    <button onclick="yesLove()">YES</button>
+
+    <p id="loveDays"></p>
+
+    <button onclick="surpriseMessage()">Click For Extra Surprise 🎁</button>
+</section>
+
+
+<section class="section steps">
+    <h3>💖 How to Unlock the Other YES Button 💖</h3>
+
+    <div class="quiz-container">
+    
+        <ol style="margin-bottom:20px;">
+            <li>Answer the quiz about me carefully 😘</li>
+            <li>Get at least 10 out of 10 questions correct 📝</li>
+            <li>Once you pass, the tricky YES button will appear ✨</li>
+            <li>Click the YES button to see your surprise 🌸</li>
+            <li>Enjoy all the love waiting for you 💐❤️</li>
+        </ol>
+
+        
+        <form id="loveQuiz">
+            <div id="questions"></div>
+            <button type="button" onclick="checkQuiz()">Submit Answers</button>
+        </form>
+
+
+        <div id="yesButtonContainer" style="display:none; text-align:center; margin-top:20px;">
+            <button onclick="showSurprise()">YES 💖</button>
+        </div>
+    </div>
+</section>
+
+
+<script>
+const quizData = [
+    { q: "What is my favorite color?", options: ["Red", "Blue", "Pink", "Green"], answer: "Green" },
+    { q: "What’s my dream vacation spot for us?", options: ["Paris", "Maldives", "Newyork", "Dubai"], answer: "Maldives" },
+    { q: "My favorite food?", options: ["chapati", "ugali", "chicken", "roasted meat"], answer: "roasted meat" },
+    { q: "My favorite movie genre?", options: ["Horror", "Romance", "Action", "Comedy"], answer: "Romance" },
+   { q: "What’s my favorite type of date?", options: ["Romantic dinner", "Movie night", "Picnic in park", "Beach walk"], answer: "Movie night" },
+    { q: "Favorite season?", options: ["Summer", "Winter", "Spring", "Autumn"], answer: "summer" },
+    { q: "My favorite flower for you?", options: ["Rose", "Tulip", "Lily", "Daisy"], answer: "Rose" },
+    { q: "Coffee or Tea?", options: ["Coffee", "Tea"], answer: "Tea" },
+    { q: "Favorite hobby?", options: ["Reading", "Gaming", "Traveling to places", "hiking","watching"], answer: "Traveling to places" },
+    { q: "Favorite song?", options: ["Rnb", "hiphop", "gospel", "Bongo"], answer: "hiphop" }
+];
+
+const questionsContainer = document.getElementById("questions");
+quizData.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.style.marginBottom = "15px";
+    div.innerHTML = `<p>${index + 1}. ${item.q}</p>` +
+        item.options.map(opt => 
+            `<label>
+                <input type="radio" name="q${index}" value="${opt}"> ${opt}
+            </label>`
+        ).join("");
+    questionsContainer.appendChild(div);
+});
+
+function checkQuiz() {
+    let score = 0;
+    quizData.forEach((item, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selected && selected.value === item.answer) {
+            score++;
+        }
+    });
+
+    if (score >= 10) {
+        alert(`🎉 Congrats! You got ${score}/10! The YES button is now unlocked!`);
+        document.getElementById("yesButtonContainer").style.display = "block";
+    } else {
+        alert(`You got ${score}/10. Try again to unlock the YES button! 💖`);
+    }
+}
+
+function showSurprise() {
+
+    window.location.href = "final.html";
+}
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
