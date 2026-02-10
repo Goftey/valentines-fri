@@ -360,7 +360,7 @@ function startSlideshow() {
 }
 
 function goToMain() {
-    window.location.href = "index.html";
+    window.location.href = "password.html";
 }
 
 
