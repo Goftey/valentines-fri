@@ -394,7 +394,7 @@ function loveCounter() {
 
     const counter = document.getElementById("loveDays");
     if (counter) {
-        counter.innerText = `${days} days together ❤️`;
+        counter.innerText = `${days} days together ❤️Happy Anniversary too Babby`;
     }
 }
 
